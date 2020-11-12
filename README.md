@@ -3,9 +3,7 @@
 - docker-compose.yml
 ````shell
 version: "3"
-
 services:
-
   coturn:
     #生产模式，去掉build
     build:
