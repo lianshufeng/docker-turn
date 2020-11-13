@@ -5,14 +5,12 @@
 version: "3"
 services:
   coturn:
-    #生产模式，去掉build
-    build:
-      context: ./
-      dockerfile: Dockerfile
     image: lianshufeng/coturn
     environment:
       #外网ip
       - ExternalIp=xx.xx.xx.xx
+      - username=xiaofeng
+      - password=xiaofeng123
     ports:
       - "3478:3478"
       - "3478:3478/udp"
