@@ -21,11 +21,14 @@ RUN echo "TURNSERVER_ENABLED=1" > /etc/default/coturn
 
 #外网ip,仅在不挂载配置文件生效
 ENV ExternalIp 127.0.0.1
+ENV Realm test.com
 ENV username xiaofeng
 ENV password xiaofeng123
 
 
+
 EXPOSE 3478
+EXPOSE 3478/udp
 EXPOSE 49152-65535/udp
 
 #设置启动
